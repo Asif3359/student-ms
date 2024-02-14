@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.Timer;
+import Admin.adminPage;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 /**
  *
@@ -48,7 +51,7 @@ public class Splash extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnLoginLg = new javax.swing.JButton();
         btnSingup = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
@@ -193,7 +196,12 @@ public class Splash extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText("Login");
+        btnLoginLg.setText("Login");
+        btnLoginLg.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLoginLgActionPerformed(evt);
+            }
+        });
 
         btnSingup.setText("singup");
         btnSingup.addActionListener(new java.awt.event.ActionListener() {
@@ -221,14 +229,14 @@ public class Splash extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPasswordField1)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnLoginLg, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnSingup, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 152, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnSingup, jButton1});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btnLoginLg, btnSingup});
 
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -249,7 +257,7 @@ public class Splash extends javax.swing.JFrame {
                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLoginLg, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnSingup, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(134, Short.MAX_VALUE))
         );
@@ -477,6 +485,19 @@ public class Splash extends javax.swing.JFrame {
         logInPage.setVisible(true);
     }//GEN-LAST:event_btnLoginSuActionPerformed
 
+    private void btnLoginLgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginLgActionPerformed
+        // TODO add your handling code here:
+        dispose();
+        adminPage adminPageFrame = new adminPage();
+        adminPageFrame.setVisible(true);
+        adminPageFrame.pack();
+        adminPageFrame.setLocationRelativeTo(null);
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        adminPageFrame.setSize(screenSize.width - 400, screenSize.height - 200);
+        adminPageFrame.setLocationRelativeTo(null);
+
+    }//GEN-LAST:event_btnLoginLgActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -510,6 +531,8 @@ public class Splash extends javax.swing.JFrame {
                 Splash SplashFrame = new Splash();
                 SplashFrame.setVisible(true);
                 SplashFrame.pack();
+                Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                SplashFrame.setSize(screenSize.width - 400, screenSize.height - 200);
                 SplashFrame.setLocationRelativeTo(null);
 
                 SplashFrame.jProgress.setForeground(Color.BLUE);
@@ -546,10 +569,10 @@ public class Splash extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SingUpPage;
+    private javax.swing.JButton btnLoginLg;
     private javax.swing.JButton btnLoginSu;
     private javax.swing.JButton btnSingUpSu;
     private javax.swing.JButton btnSingup;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;

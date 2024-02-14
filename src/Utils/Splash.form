@@ -251,7 +251,7 @@
                               <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
                               <Component id="jPasswordField1" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton1" linkSize="1" min="-2" pref="82" max="-2" attributes="0"/>
+                                  <Component id="btnLoginLg" linkSize="1" min="-2" pref="82" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="btnSingup" linkSize="1" min="-2" pref="82" max="-2" attributes="0"/>
                                   <EmptySpace min="0" pref="152" max="32767" attributes="0"/>
@@ -280,7 +280,7 @@
                           <Component id="jPasswordField1" min="-2" pref="39" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
+                              <Component id="btnLoginLg" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                               <Component id="btnSingup" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="134" max="32767" attributes="0"/>
@@ -333,10 +333,13 @@
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField2ActionPerformed"/>
                   </Events>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton1">
+                <Component class="javax.swing.JButton" name="btnLoginLg">
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Login"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnLoginLgActionPerformed"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JButton" name="btnSingup">
                   <Properties>
@@ -381,7 +384,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jPanel7" max="32767" attributes="0"/>
+                  <Component id="jPanel7" pref="380" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
